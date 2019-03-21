@@ -1,22 +1,28 @@
 <?php
 
-	include("../Database/connection.php");
+include("../Database/connection.php");
 
-	$login = $_POST['login'];
-    $senha = $_POST['senha'];
+session_start();
 
-    $con = getConnection();
+$login = $_POST['login'];
+$senha = $_POST['senha'];
 
-    $query = "SELECT * FROM usuario WHERE nome ='$login' AND senha='$senha'";
+$con = getConnection();
 
-    $result = pg_query($con,$query);
+$query = "SELECT * FROM usuario WHERE nome ='$login' AND senha='$senha'";
 
-    if(pg_num_rows($result)>0){
-    	echo "logado";
-    }else{
-    	echo "erro";
-    }
+$result = pg_query($con,$query);
 
-    closeConnection($con);
+closeConnection($con);
+
+if(pg_num_rows($result)>0){
+   $_SESSION['login'] = $login;
+   header('location:../home/home.php');    
+}else{
+    $_SESSION['erro'] = "Erro de autenticação";
+    header('location:../index.php'); 
+}
+
+   
 
 ?>

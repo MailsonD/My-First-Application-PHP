@@ -3,6 +3,9 @@
 <head>
 	<title>Iniciação</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<?php
+		include("Controllers/sessionController.php");
+	?>
 </head>
 	<body style=" background-color: gray">
 		<div class="container-fluid">
