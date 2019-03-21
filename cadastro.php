@@ -17,7 +17,28 @@
 								<div class="form-group">
 									<label>Nome</label>
 									<input type="text" name="nome" class="form-control">
-								</div>			
+								</div>
+								<div class="form-group">
+									<label>Raça</label>
+									<input type="text" name="raca" class="form-control">
+								</div>	
+								<div class="form-group">
+									<label>Classe</label>
+									<input type="text" name="classe" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Nome de guerra</label>
+									<input type="text" name="login" class="form-control">
+								</div>		
+								<div class="form-group">
+									<label>Palavra Mágina</label>
+									<input type="password" name="senha" class="form-control">
+								</div>
+								<div class="form-group">
+									<button class="btn btn-success btn-block" type="submit">
+										Criar
+									</button>
+								</div>					
 							</form>
 						</div>
 					</div>
