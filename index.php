@@ -17,7 +17,7 @@
 								</center>	
 							</div>
 							<p></p>
-							<form>
+							<form action="Controllers/autentication.php" method="POST">
 								
 								<div class="form-group">
 									<label>Nome de guerra</label>
