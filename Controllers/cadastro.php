@@ -14,10 +14,12 @@
 	VALUES ('$login','$senha','$nome','$raca','$classe')";
 
 	if(pg_query($con,$query)){
-		echo "foi";
+		$_SESSION['msg'] = "Cadastrado com sucesso!";
+		header('location:../index.php');  
 	}else{
-		echo "não foi";
+		$_SESSION['msg'] = "Falha no cadastro!";
+		header('location:cadastro.php');  
 	}
 
-	?>
+?>
 
