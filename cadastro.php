@@ -4,8 +4,12 @@
 	<title>Iniciação</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<?php
-		include("Controllers/sessionController.php");
-	?>
+		session_start();
+
+		if(isset($_SESSION['login'])){
+			header('location:home/home.php');
+		}
+	?> 
 </head>
 	<body style=" background-color: gray">
 		<div class="container-fluid">
@@ -50,4 +54,7 @@
 			</div>
 		</div>
 	</body>
+	<?php 
+		include('../menssage.php');
+	?>
 </html>
