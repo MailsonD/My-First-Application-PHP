@@ -10,7 +10,7 @@
 
 	$con = getConnection();
 
-	$query = "INSERT INTO usuario (login,senha,nome,raca,classe) 
+	$query = "INSERT INTO personagem (nome_de_guerra,palavra_magica,nome,raca,classe) 
 	VALUES ('$login','$senha','$nome','$raca','$classe')";
 
 	if(pg_query($con,$query)){

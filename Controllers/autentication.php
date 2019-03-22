@@ -9,7 +9,7 @@ $senha = $_POST['senha'];
 
 $con = getConnection();
 
-$query = "SELECT * FROM usuario WHERE login ='$login' AND senha='$senha'";
+$query = "SELECT * FROM personagem WHERE nome_de_guerra ='$login' AND palavra_magica ='$senha'";
 
 $result = pg_query($con,$query);
 
