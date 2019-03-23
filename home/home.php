@@ -9,6 +9,7 @@
 	
 	<?php
 	include("../Controllers/sessionController.php");
+	include("../Controllers/atributosPersonagem.php");
 	?> 
 </head>
 <body class="home">
@@ -32,20 +33,22 @@
 
 	<div class="row" style="margin-top:10%"></div>
 	<div class="row">
-		<div class="col-2"></div>
-		<div class="col-8">
+		<div class="col-3"></div>
+		<div class="col-6">
 			<div class="jumbotron">
-				<h1 class="display-4">Seja bem vindo <?php echo $logado; ?></h1>
-				<p class="lead">Seu nível atual é <?php buscarNivel($logado)?></p>
+				<h1 class="display-4 d-flex justify-content-center">Seja bem vindo <?php echo $logado; ?></h1>
+				<br/>
+				<h3>Seu nível atual é <?php buscarNivel($logado);?> </h3>
 				<hr class="my-4">
 				<p>Todos os atributos a seguir demonstram o seu nível de poder no nosso mundo. Adquira experiência e dracmas de ouro para que possa ficar cada vez mais forte.</p>
-				<p>
-					<?php buscarAtributos()?>
-				</p>
-				<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				<?php buscarAtributos($logado);?>
+				
+				<form>
+					<button class="btn btn-primary btn-lg" href="#" role="button">Subir nível</button>
+				</form>
 			</div>
 		</div>
-		<div class="col-2"></div>
+		<div class="col-3"></div>
 	</div>
 	<div class="row" style="margin-top:10%"></div>
 </body>
