@@ -49,7 +49,7 @@
 
 					?>
 					<center>
-						<p>Crie seu personagem</p>
+						<p>Atualize seus dados</p>
 					</center>
 					<div class="form-group">
 						<label>Nome de guerra</label>
