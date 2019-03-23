@@ -6,8 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="css/theme.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<?php
+
+		//resume a sessão
 		session_start();
 
+		//testa se o usuário já está logado para redirecioná-lo a página principal
 		if(isset($_SESSION['login'])){
 			header('location:home/home.php');
 		}

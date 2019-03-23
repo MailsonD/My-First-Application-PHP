@@ -8,6 +8,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<?php
+
+	//Importa todos os arquivos de controle de sessão e de atributos de personagem
+	//Esta função, diferente do include faz com que a página só rode se ela tb rodar
 	require("../Controllers/sessionController.php");
 	require("../Controllers/atributosPersonagem.php");
 	?> 
