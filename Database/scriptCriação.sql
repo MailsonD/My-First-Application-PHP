@@ -10,7 +10,7 @@ CREATE TABLE personagem(
 CREATE TABLE nivelPersonagem(
 	nomePersonagem TEXT PRIMARY KEY,
 	nivel INT,
-	FOREIGN KEY (nomePersonagem) REFERENCES personagem(nome_de_guerra)
+	FOREIGN KEY (nomePersonagem) REFERENCES personagem(nome_de_guerra) ON UPDATE CASCADE ON DELETE CASCADE	
 );
 
 CREATE TABLE atributosPersonagem(
@@ -19,7 +19,7 @@ CREATE TABLE atributosPersonagem(
 	destreza INT,
 	inteligencia INT,
 	carisma INT,
-	FOREIGN KEY (nomePersonagem) REFERENCES personagem(nome_de_guerra)
+	FOREIGN KEY (nomePersonagem) REFERENCES personagem(nome_de_guerra) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 
