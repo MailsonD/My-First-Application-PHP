@@ -1,5 +1,5 @@
 <?php
-include("../Database/connection.php");
+require("../Database/connection.php");
 
 function buscarNivel($personagemLogado){
 

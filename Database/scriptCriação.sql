@@ -50,7 +50,7 @@ $$LANGUAGE PLPGSQL;
 CREATE OR REPLACE FUNCTION incrementaAtributos() RETURNS TRIGGER
 AS $$
 	BEGIN
-		UPDATE atributosPersonagem SET forca = forca +1, destreza = destreza+1, inteligencia = inteligencia+1, carisma = carisma+1 WHERE nomePersonagem = NEW.nome_de_guerra;
+		UPDATE atributosPersonagem SET forca = forca +1, destreza = destreza+1, inteligencia = inteligencia+1, carisma = carisma+1 WHERE nomePersonagem = NEW.nomePersonagem;
 		RETURN NULL;	
 	END
 $$LANGUAGE PLPGSQL;

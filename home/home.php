@@ -8,8 +8,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<?php
-	include("../Controllers/sessionController.php");
-	include("../Controllers/atributosPersonagem.php");
+	require("../Controllers/sessionController.php");
+	require("../Controllers/atributosPersonagem.php");
 	?> 
 </head>
 <body class="home">
@@ -43,7 +43,7 @@
 				<p>Todos os atributos a seguir demonstram o seu nível de poder no nosso mundo. Adquira experiência e dracmas de ouro para que possa ficar cada vez mais forte.</p>
 				<?php buscarAtributos($logado);?>
 				
-				<form>
+				<form method="post" action="../Controllers/subirnivel.php">
 					<button class="btn btn-primary btn-lg" href="#" role="button">Subir nível</button>
 				</form>
 			</div>
